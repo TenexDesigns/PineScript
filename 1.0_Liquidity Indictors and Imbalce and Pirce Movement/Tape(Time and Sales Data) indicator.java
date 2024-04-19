@@ -1,8 +1,5 @@
-FIRST INDICATOR.JAVA
-
-
-
-
+Tape (Time and Sales) liquid-trader
+https://www.tradingview.com/script/vIDMwYuU-Tape-Time-and-Sales/
 
 
 
