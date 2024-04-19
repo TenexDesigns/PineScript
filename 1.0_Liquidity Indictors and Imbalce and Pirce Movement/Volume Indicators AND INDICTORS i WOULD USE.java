@@ -1,12 +1,43 @@
 https://www.tradingview.com/scripts/volume/page-6/
 
 
-**********  https://www.tradingview.com/script/nYrL0Dz6-Volume-Trend-Meter-LTF/                                            Volume Trend Meter LTF    ----->   HIS SCRIPTS https://www.tradingview.com/u/dman103/#published-scripts
-*********  https://www.tradingview.com/script/LFBaHNuA-Pivot-Points-Algo/
-********   https://www.tradingview.com/script/0lERSwqB-Rabbit-Hole/
+**********    https://www.tradingview.com/script/nYrL0Dz6-Volume-Trend-Meter-LTF/                                            Volume Trend Meter LTF    ----->   HIS SCRIPTS https://www.tradingview.com/u/dman103/#published-scripts
+*********     https://www.tradingview.com/script/LFBaHNuA-Pivot-Points-Algo/
+********      https://www.tradingview.com/script/0lERSwqB-Rabbit-Hole/
+*******       https://www.tradingview.com/script/usbHOChM-DMI-Modified-Strategy/
+*******       https://www.tradingview.com/script/WssGr0yH-Adaptive-Donchian-Lines/   ---------------------
+*******       https://www.tradingview.com/script/HOm8KLbF-RSI-Histogram/
+*******       https://www.tradingview.com/script/BSiT7aK1-MA/
+******        https://www.tradingview.com/script/31pQAX56-Close-Counter-Histogram/
+*******       https://www.tradingview.com/script/HHGMSQFp-Price-Volume-Value-Histogram/
+*********     https://www.tradingview.com/script/OULfXjkq-Heikin-Ashi-Trend-Indicator/
+********      https://www.tradingview.com/script/03Alv7bW-On-Balance-Volume-Momentum/
+*******B      https://www.tradingview.com/script/yLP4Vbsy-Heiken-Ashi-Smoothed-Net-Volume/
+*******       https://www.tradingview.com/script/eSVRUwCf-TFS-Volume-Oscillator-Noise-Filtered/
+*********     https://www.tradingview.com/script/wCbldhhg/
+********      https://www.tradingview.com/script/Ihpq7ye5-DsD/
+********      https://www.tradingview.com/script/ywEEvEtI-Volume-Trend-Meter/
+  *****       https://www.tradingview.com/script/qvdqvpYn-Market-Emotions/
+  ******      https://www.tradingview.com/script/HHGMSQFp-Price-Volume-Value-Histogram/
+  *****       https://www.tradingview.com/script/xp9OdTFm-Volume-Profile-Volume-Delta-OI-Delta-Kioseff-Trading/
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
 https://www.tradingview.com/script/GniGSDgt/                                                                             - Relative Volume Indicator
 https://www.tradingview.com/script/esZMDlod-Volume-CVD-and-Open-Interest/                                                 -Volume CVD and Open Interest
