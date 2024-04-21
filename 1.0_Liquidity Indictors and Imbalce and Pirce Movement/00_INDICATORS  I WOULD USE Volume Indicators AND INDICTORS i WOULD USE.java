@@ -1,7 +1,10 @@
 https://www.tradingview.com/scripts/volume/page-6/
 
 00000000     https://in.tradingview.com/script/OBnNYa1d-Uber-Baseline-UTS/ --------------------- check it out
-********      https://br.tradingview.com/script/cAQJtauT-SuperTREX/
+********     https://www.tradingview.com/script/h6IgRxWC-Buy-Sell-Indicator/
+**** https://in.tradingview.com/script/TQSL9xVn-Range-Filter-x-Hull-Suite/
+ **** https://in.tradingview.com/script/J8GzFGfD-Range-Filter-Buy-and-Sell-5min-guikroth-version/
+ ********      https://br.tradingview.com/script/cAQJtauT-SuperTREX/
  https://br.tradingview.com/script/MX8EUksX/
 **********    https://www.tradingview.com/script/nYrL0Dz6-Volume-Trend-Meter-LTF/                                            Volume Trend Meter LTF    ----->   HIS SCRIPTS https://www.tradingview.com/u/dman103/#published-scripts
 *********     https://www.tradingview.com/script/LFBaHNuA-Pivot-Points-Algo/
@@ -22,6 +25,7 @@ https://www.tradingview.com/scripts/volume/page-6/
   *****       https://www.tradingview.com/script/qvdqvpYn-Market-Emotions/
   ******      https://www.tradingview.com/script/HHGMSQFp-Price-Volume-Value-Histogram/
   *****       https://www.tradingview.com/script/xp9OdTFm-Volume-Profile-Volume-Delta-OI-Delta-Kioseff-Trading/
+ ********     https://in.tradingview.com/script/pjK8ksqR-Buy-Sell-by-Prakash-EEE/
 
 
 
