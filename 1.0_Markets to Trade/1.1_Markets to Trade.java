@@ -329,5 +329,21 @@ These are the pairs with their pair identifiers and strong correlations as reque
 
 
 
+   Currencies that should move in the same way are:
+
+ EUR/USD and GBP/USD
+ EUR/USD and NZD/USD
+ USD/CHF and USD/JPY
+ AUD/USD and GBP/USD
+ AUD/USD and EUR/USD
+Currencies that should move in the opposite way are:
+
+ EUR/USD and USD/CHF
+ GBP/USD and USD/JPY
+ GBP/USD and USD/CHF
+ AUD/USD and USD/CAD
+ AUD/USD and USD/JPY
+
+
   
   
