@@ -1,0 +1,85 @@
+Here's the C# code for the Range Filter Buy and Sell strategy adapted for cTrader Automate:
+
+```csharp
+using cAlgo.API;
+
+namespace cAlgo.Indicators
+{
+    [Indicator(IsOverlay = true, Timeframes = Timeframe.M5)]
+    public class RangeFilterBuySell : Indicator
+    {
+        // Indicator Inputs
+        [Input(DefaultValue = Close, Title = "Source")]
+        public DataSeries Source { get; set; }
+
+        [Input(DefaultValue = 100, MinValue = 1, Title = "Sampling Period")]
+        public int SamplingPeriod { get; set; }
+
+        [Input(DefaultValue = 3.0, MinValue = 0.1, Title = "Range Multiplier")]
+        public double RangeMultiplier { get; set; }
+
+        // Colors
+        private readonly Color upColor = Color.White;
+        private readonly Color midColor = Color.FromHexCode("#90bff9");
+        private readonly Color downColor = Color.Blue;
+
+        // Calculated Variables
+        private DataSeries filt, smrng, hband, lband;
+        private Series filtPlot, hbandPlot, lbandPlot;
+
+        protected override void Initialize()
+        {
+            // Smooth Average Range calculation (assuming implemented elsewhere)
+            smrng = Indicators.GetIndicator<RangeFilterSmoothAverageRange>(SamplingPeriod, RangeMultiplier).SmoothAverageRange;
+
+            // Range Filter
+            filt = Source - Math.Max(0, Math.Min(Source - Source.Lag(1), smrng));
+
+            // Filter Direction
+            var upward = new IndicatorDataSeries(this);
+            var downward = new IndicatorDataSeries(this);
+            upward[0] = 0;
+            downward[0] = 0;
+            for (int i = 1; i < Bars.Count; i++)
+            {
+                upward[i] = filt[i] > filt[i - 1] ? upward[i - 1] + 1 : filt[i] < filt[i - 1] ? 0 : upward[i - 1];
+                downward[i] = filt[i] < filt[i - 1] ? downward[i - 1] + 1 : filt[i] > filt[i - 1] ? 0 : downward[i - 1];
+            }
+
+            // Target Bands
+            hband = filt + smrng;
+            lband = filt - smrng;
+
+            // Colors
+            var filtColor = upward.Last(1) > 0 ? upColor : downward.Last(1) > 0 ? downColor : midColor;
+            var barColor = Source.IsRising() && Source > filt && upward.Last(1) > 0 ? upColor :
+                           Source.IsRising() && Source < filt && upward.Last(1) > 0 ? upColor :
+                           Source.IsFalling() && Source < filt && downward.Last(1) > 0 ? downColor :
+                           Source.IsFalling() && Source > filt && downward.Last(1) > 0 ? downColor : midColor;
+
+            // Plots
+            filtPlot = CreateLine("Filtered Price", filt, filtColor, 2);
+            hbandPlot = CreateLine("High Target", hband, Color.FromArgb(70, upColor.Red, upColor.Green, upColor.Blue));
+            lbandPlot = CreateLine("Low Target", lband, Color.FromArgb(70, downColor.Red, downColor.Green, downColor.Blue));
+            CreateFill("High Target Range", hbandPlot, filtPlot, Color.FromArgb(90, upColor.Red, upColor.Green, upColor.Blue));
+            CreateFill("Low Target Range", lbandPlot, filtPlot, Color.FromArgb(90, downColor.Red, downColor.Green, downColor.Blue));
+            ChartObjects.DrawBar(barColor, Bars.Open, Bars.High, Bars.Low, Bars.Close);
+        }
+    }
+
+    [Robot(IsFøllow = false)]
+    public class RangeFilterBuySellRobot : Robot
+    {
+        private RangeFilterBuySell _indicator;
+        private DataSeries _longCondition, _shortCondition;
+
+        protected override void OnStart()
+        {
+            _indicator = Indicators.GetIndicator<RangeFilterBuySell>(Symbol);
+
+            // Strategy Variables (assuming implemented elsewhere)
+            // timeInput (Start date)
+            // stopLossPips
+
+            _longCondition = new IndicatorDataSeries(this);
+            _shortCondition = new Indicator
